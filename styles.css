@@ -1,0 +1,230 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #2D2D2D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Base styles for the weather card */
+.weather-card {
+    background: linear-gradient(135deg, #16a5c9, #afafa3);
+    border-radius: 15px;
+    padding: 20px;  /* Reduced base padding for better scaling */
+    width: 90%;  /* Make the card width responsive */
+    max-width: 400px;  /* Set a maximum width to prevent it from being too large on wide screens */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: white;
+    margin: 20px auto;  /* Center the card on the page */
+}
+
+.weather-icon img {
+    width: 30%;  /* Use percentage for responsiveness */
+    margin: 20px 0;
+}
+
+.temperature h1 {
+    font-size: 8vw;  /* Use viewport width for scaling */
+    margin: 10px 0;
+}
+
+.location h2 {
+    font-size: 5vw;  /* Use viewport width for scaling */
+    margin: 10px 0;
+}
+
+.weather-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.weather-info img {
+    width: 15%;  /* Use percentage for responsiveness */
+    margin-bottom: 5px;
+}
+
+.weather-info span {
+    display: block;
+    font-size: 4vw;  /* Use viewport width for scaling */
+    margin-bottom: 2px;
+}
+
+.weather-info p {
+    font-size: 3vw;  /* Use viewport width for scaling */
+    margin: 0;
+    color: #F1F1F1;
+}
+
+/* Media query for devices wider than 768px (tablets and up) */
+@media (min-width: 768px) {
+    .weather-card {
+        padding: 30px;  /* Increase padding for larger screens */
+        width: 60%;  /* Adjust width for larger screens */
+    }
+
+    .temperature h1 {
+        font-size: 5vw;  /* Adjust font size */
+    }
+
+    .location h2 {
+        font-size: 3.5vw;  /* Adjust font size */
+    }
+
+    .weather-info span {
+        font-size: 2.5vw;  /* Adjust font size */
+    }
+
+    .weather-info p {
+        font-size: 2vw;  /* Adjust font size */
+    }
+}
+
+/* Media query for devices wider than 1024px (desktops) */
+@media (min-width: 1024px) {
+    .weather-card {
+        width: 40%;  /* Adjust width for desktops */
+    }
+
+    .temperature h1 {
+        font-size: 3.5vw;  /* Adjust font size */
+    }
+
+    .location h2 {
+        font-size: 2.5vw;  /* Adjust font size */
+    }
+
+    .weather-info span {
+        font-size: 2vw;  /* Adjust font size */
+    }
+
+    .weather-info p {
+        font-size: 1.5vw;  /* Adjust font size */
+    }
+}
+
+
+.search-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 30px;
+    padding: 5px 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease; 
+}
+
+.search-bar input {
+    border: none;
+    background: none;
+    color: #FFF;
+    width: 85%;
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+    font-family: 'Arial', sans-serif;
+}
+
+.search-bar input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.search-bar button {
+    background-color: #16a5c9;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.search-bar button img {
+    width: 60%;
+    height: auto;
+}
+
+.search-bar button:hover {
+    background-color: #0d839f;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #c7dd64, 0 0 20px #bbe470, 0 0 30px #bebd52; 
+}
+
+.search-bar:focus-within {
+    box-shadow: 0 0 10px #16a5c9, 0 0 20px #16a5c9, 0 0 30px #16a5c9; 
+}
+
+.search-bar button:focus {
+    outline: none;
+}
+
+.weather-icon img {
+    width: 100px;
+    margin: 20px 0;
+}
+
+.temperature h1 {
+    font-size: 49px;
+    margin: 10px 0;
+}
+
+.location h2 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.weather-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.weather-info div {
+    text-align: center;
+}
+
+.weather-info img {
+    width: 20px;
+    margin-bottom: 5px;
+}
+
+.weather-info span {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+
+.weather-info p {
+    font-size: 12px;
+    margin: 0;
+    color: #F1F1F1;
+}
+
+/* Responsive Design */
+@media (max-width: 320px) {
+    .weather-card {
+        width: 200px;
+        padding: 15px;
+    }
+
+    .weather-icon img {
+        width: 80px;
+    }
+
+    .temperature h1 {
+        font-size: 36px;
+    }
+
+    .location h2 {
+        font-size: 20px;
+    }
+}
